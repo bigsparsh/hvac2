@@ -1,11 +1,14 @@
 <script setup>
 import { services } from '@/data/site'
+import { useEnquiry } from '@/composables/useEnquiry'
 import AppButton from '@/components/ui/AppButton.vue'
 import Container from '@/components/ui/Container.vue'
 import GridOverlay from '@/components/ui/GridOverlay.vue'
 import SectionHeader from '@/components/ui/SectionHeader.vue'
 import ServiceCard from '@/components/ui/ServiceCard.vue'
 import Thermobar from '@/components/ui/Thermobar.vue'
+
+const { openEnquiry } = useEnquiry()
 </script>
 
 <template>
@@ -30,7 +33,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
         />
 
         <article
-          class="micro-card relative flex flex-col justify-between gap-4 overflow-hidden rounded-[14px] bg-navy px-5 pb-6 pt-6 hover:shadow-[0_28px_55px_-30px_rgba(24,25,51,0.75)] sm:gap-6 sm:px-7 sm:pb-8 sm:pt-[30px]"
+          class="micro-card relative flex flex-col justify-start gap-4 overflow-hidden rounded-[14px] bg-navy px-5 pb-6 pt-6 hover:shadow-[0_28px_55px_-30px_rgba(24,25,51,0.75)] sm:px-7 sm:pb-8 sm:pt-[30px]"
         >
           <GridOverlay class="absolute inset-0" />
           <div class="relative flex flex-col gap-2.5 sm:gap-3">
@@ -43,7 +46,12 @@ import Thermobar from '@/components/ui/Thermobar.vue'
               Tell us the load and the space. We'll size the system.
             </h3>
           </div>
-          <AppButton href="#contact" class="relative self-start">
+          <AppButton
+            href="#contact"
+            class="relative self-start"
+            aria-haspopup="dialog"
+            @click.prevent="openEnquiry"
+          >
             Talk to an engineer
           </AppButton>
           <Thermobar class="absolute inset-x-0 bottom-0 h-1" />

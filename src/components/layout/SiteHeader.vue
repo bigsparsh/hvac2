@@ -2,15 +2,25 @@
 import { ref } from 'vue'
 import logo from '@/assets/images/thermosync-logo.png'
 import { navigation } from '@/data/site'
+import { useEnquiry } from '@/composables/useEnquiry'
 import AppButton from '@/components/ui/AppButton.vue'
 import AppIcon from '@/components/ui/AppIcon.vue'
 import Container from '@/components/ui/Container.vue'
 import Thermobar from '@/components/ui/Thermobar.vue'
 
+const { openEnquiry } = useEnquiry()
+
 const menuOpen = ref(false)
+const menuButton = ref(null)
 
 function closeMenu() {
   menuOpen.value = false
+}
+
+function openMobileEnquiry() {
+  const trigger = menuButton.value
+  closeMenu()
+  openEnquiry(trigger)
 }
 </script>
 
@@ -67,11 +77,14 @@ function closeMenu() {
           variant="navy"
           size="sm"
           class="max-[1024px]:hidden"
+          aria-haspopup="dialog"
+          @click.prevent="openEnquiry"
         >
           Get a free consultation
         </AppButton>
 
         <button
+          ref="menuButton"
           type="button"
           class="flex h-11 w-11 items-center justify-center rounded-full border border-line text-navy transition-colors duration-300 hover:border-brand/40 hover:bg-mist min-[1024px]:hidden"
           :aria-expanded="menuOpen"
@@ -132,7 +145,8 @@ function closeMenu() {
             href="#contact"
             variant="navy"
             class="mt-2 w-full justify-center"
-            @click="closeMenu"
+            aria-haspopup="dialog"
+            @click.prevent="openMobileEnquiry"
           >
             Get a free consultation
           </AppButton>

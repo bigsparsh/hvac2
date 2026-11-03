@@ -11,6 +11,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection.vue'
 import ServicesSection from '@/components/sections/ServicesSection.vue'
 import SupportSection from '@/components/sections/SupportSection.vue'
 import WhySection from '@/components/sections/WhySection.vue'
+import EnquiryModal from '@/components/ui/EnquiryModal.vue'
 </script>
 
 <template>
@@ -29,5 +30,6 @@ import WhySection from '@/components/sections/WhySection.vue'
       <ContactSection />
     </main>
     <SiteFooter />
+    <EnquiryModal />
   </div>
 </template>
