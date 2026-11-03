@@ -1,0 +1,510 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/* Fonts                                                                      */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/Inter-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/fonts/Poppins-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/Poppins-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/Poppins-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./assets/fonts/Poppins-ExtraBold.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------- */
+/* Design tokens                                                              */
+/* -------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+
+  --color-navy: #181933;
+  --color-denim: #17376f;
+  --color-brand: #206fc3;
+  --color-solar: #fdae09;
+  --color-ochre: #c47f00;
+  --color-cream: #fff4db;
+  --color-crimson: #9a0f14;
+  --color-ink: #2b2f38;
+  --color-muted: #6b6b78;
+  --color-mist: #f4f6f9;
+  --color-line: #e3e8ef;
+  --color-field-line: #d5dce6;
+  --color-cloud: #c9cfe0;
+  --color-steel: #b9c0d4;
+  --color-slateblue: #8ea0c4;
+  --color-fog: #dfe3ee;
+  --color-sky: #9cc4ef;
+  --color-azure: #6fa9e6;
+  --color-grass: #4ca10d;
+  --color-leaf: #3f860b;
+  --color-bronze: #c04110;
+  --color-midblue: #1b53a0;
+  --color-burnt: #ec7b0c;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Base                                                                       */
+/* -------------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--color-navy);
+    font-family: var(--font-sans);
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--color-solar);
+    color: var(--color-navy);
+  }
+
+  :where(a, button, input, select, textarea):focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--color-brand);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-denim);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Reusable pieces                                                            */
+/* -------------------------------------------------------------------------- */
+
+@layer components {
+  .thermobar {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+      90deg,
+      #fdae09,
+      #9a0f14 45%,
+      #17376f 78%,
+      #181933
+    );
+    background-size: 200% 100%;
+    animation: thermoshift 9s ease-in-out infinite alternate;
+  }
+
+  .hex-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+
+  .hero-glow {
+    background:
+      radial-gradient(
+        900px 520px at 92% -10%,
+        rgba(253, 174, 9, 0.22),
+        transparent 60%
+      ),
+      radial-gradient(
+        760px 520px at 4% 115%,
+        rgba(32, 111, 195, 0.45),
+        transparent 60%
+      );
+    animation: glow-breathe 11s ease-in-out infinite alternate;
+  }
+
+  .support-glow {
+    background: radial-gradient(
+      700px 400px at 100% 0%,
+      rgba(32, 111, 195, 0.35),
+      transparent 60%
+    );
+    animation: glow-breathe 13s ease-in-out infinite alternate-reverse;
+  }
+
+  .micro-card {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease,
+      background-color 0.35s ease;
+  }
+
+  @media (hover: hover) {
+    .micro-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(32, 111, 195, 0.32);
+      box-shadow: 0 22px 45px -28px rgba(24, 25, 51, 0.45);
+    }
+  }
+
+  .micro-icon {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .group:hover .micro-icon {
+    transform: translateY(-2px) scale(1.08);
+  }
+
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .btn-icon svg {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-icon:hover svg {
+    transform: translateX(3px);
+  }
+
+  .float-logo {
+    animation: float-logo 6s ease-in-out infinite;
+  }
+
+  .marquee {
+    container-type: inline-size;
+    overflow: hidden;
+    padding-block: 16px;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 24px,
+      #000 calc(100% - 24px),
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 24px,
+      #000 calc(100% - 24px),
+      transparent
+    );
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-group {
+    display: flex;
+    gap: 14px;
+    padding-right: 14px;
+  }
+
+  /* One partner set = 5 cards. From 640px up, size cards so exactly four
+     fit inside the marquee viewport at any width. */
+  .partner-card {
+    width: 132px;
+    height: 76px;
+  }
+
+  .partner-card img {
+    width: auto;
+    height: auto;
+    max-width: 82%;
+    max-height: 58%;
+    object-fit: contain;
+  }
+
+  @media (min-width: 640px) {
+    .partner-card {
+      width: calc((100cqi - 42px) / 4);
+      height: 82px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .partner-card {
+      height: 96px;
+    }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 28px 24px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-card:first-child {
+    border-top: 0;
+  }
+
+  @media (min-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-card {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-card:nth-child(odd) {
+      border-left: 0;
+    }
+
+    .stat-card:nth-child(-n + 2) {
+      border-top: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .stat-card {
+      border-top: 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-card:nth-child(odd) {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-card:first-child {
+      border-left: 0;
+    }
+  }
+
+  .chip {
+    @apply inline-block rounded-[30px] border border-line bg-mist px-[11px] py-[7px] text-xs leading-none text-ink;
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  .chip:hover {
+    transform: translateY(-2px);
+    border-color: rgba(32, 111, 195, 0.35);
+    background: #ffffff;
+  }
+
+  .field-label {
+    @apply mb-1.5 block font-display text-[13px] font-medium text-navy;
+    transition: color 0.2s ease;
+  }
+
+  .field-label:has(+ .field-input:focus) {
+    color: var(--color-brand);
+  }
+
+  .field-input {
+    @apply min-h-12 w-full rounded-[10px] border border-field-line bg-white px-[14px] py-3 text-[15px] text-navy placeholder:text-[#757575];
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .field-input:hover {
+    border-color: rgba(32, 111, 195, 0.5);
+  }
+
+  .field-input:focus {
+    @apply border-brand outline-2 outline-offset-1 outline-brand;
+    box-shadow: 0 0 0 4px rgba(32, 111, 195, 0.12);
+  }
+
+  .project-table {
+    width: 100%;
+    min-width: 860px;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .project-table th {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e3e8ef;
+    background: #f4f6f9;
+    color: #6b6b78;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .project-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e3e8ef;
+    color: #2b2f38;
+    vertical-align: middle;
+  }
+
+  .project-table tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .project-table td.customer {
+    color: #181933;
+    font-weight: 600;
+  }
+
+  .project-table .num {
+    color: #181933;
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-logo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+@keyframes thermoshift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-breathe {
+  from {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
