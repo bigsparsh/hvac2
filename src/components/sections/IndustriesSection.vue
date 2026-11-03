@@ -15,7 +15,7 @@ import SectionHeader from '@/components/ui/SectionHeader.vue'
       />
 
       <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-3.5"
+        class="grid grid-cols-2 gap-3 sm:gap-3.5 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]"
       >
         <IndustryCard
           v-for="industry in industries"

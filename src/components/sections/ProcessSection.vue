@@ -21,7 +21,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
       <Thermobar class="rounded-[4px]" />
 
       <ol
-        class="-mt-7 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-4 p-0"
+        class="-mt-7 grid list-none grid-cols-2 gap-3 p-0 sm:gap-4 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]"
       >
         <ProcessStep
           v-for="step in processSteps"

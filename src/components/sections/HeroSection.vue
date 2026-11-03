@@ -25,9 +25,10 @@ import Thermobar from '@/components/ui/Thermobar.vue'
         </span>
 
         <h1
-          class="text-[clamp(34px,6vw,72px)] font-bold leading-[1.04] text-white sm:leading-[1.02]"
+          class="text-[clamp(34px,6vw,72px)] font-bold leading-[1.04] text-white sm:leading-[1.02] lg:text-[clamp(54px,calc(6vw-6px),66px)]"
         >
-          Power &amp; Cooling Services for
+          <span class="lg:whitespace-nowrap">Power &amp; Cooling</span> Services
+          for
           <span class="text-solar">Critical Spaces</span>
         </h1>
 

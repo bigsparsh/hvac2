@@ -9,7 +9,7 @@ defineProps({
     class="stat-card group flex flex-col gap-1.5 transition-colors duration-300 hover:bg-white/[0.035]"
   >
     <span
-      class="origin-left font-display text-[40px] font-bold leading-none tabular-nums transition-transform duration-500 ease-out group-hover:scale-105"
+      class="origin-left font-display text-[34px] font-bold leading-none tabular-nums transition-transform duration-500 ease-out group-hover:scale-105 sm:text-[40px]"
       :class="stat.color"
     >
       {{ stat.value }}

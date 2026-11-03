@@ -8,7 +8,7 @@ defineProps({
 
 <template>
   <div
-    class="group micro-card flex min-h-[120px] flex-col justify-between gap-3.5 rounded-[14px] border border-line bg-white px-5 py-[22px]"
+    class="group micro-card flex min-h-[112px] flex-col justify-between gap-3 rounded-[14px] border border-line bg-white px-4 py-4 sm:min-h-[120px] sm:gap-3.5 sm:px-5 sm:py-[22px]"
   >
     <AppIcon
       :name="industry.icon"
@@ -17,7 +17,7 @@ defineProps({
       class="micro-icon shrink-0"
     />
     <span
-      class="font-display text-[15.5px] font-semibold text-navy transition-colors duration-300 group-hover:text-brand"
+      class="font-display text-[14px] font-semibold text-navy transition-colors duration-300 group-hover:text-brand sm:text-[15.5px]"
     >
       {{ industry.name }}
     </span>
