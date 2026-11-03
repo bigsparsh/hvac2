@@ -16,7 +16,7 @@ function telHref(phone) {
     <GridOverlay class="absolute inset-x-0 bottom-0 top-1.5 opacity-60" />
 
     <Container
-      class="relative grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-10 pb-10 pt-16"
+      class="relative grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-8 pb-8 pt-12 sm:gap-10 sm:pb-10 sm:pt-16"
     >
       <div class="group flex flex-col gap-4">
         <div class="flex items-center gap-3">

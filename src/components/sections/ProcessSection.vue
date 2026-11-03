@@ -11,7 +11,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
     id="process"
     class="border-y border-line bg-mist"
   >
-    <Container class="flex flex-col gap-11 py-24">
+    <Container class="flex flex-col gap-8 py-16 sm:gap-11 sm:py-24">
       <SectionHeader
         eyebrow="Our capabilities"
         title="From first call to lifelong support"
@@ -21,7 +21,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
       <Thermobar class="rounded-[4px]" />
 
       <ol
-        class="-mt-7 grid list-none grid-cols-2 gap-3 p-0 sm:gap-4 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]"
+        class="-mt-5 grid list-none grid-cols-2 gap-3 p-0 sm:-mt-7 sm:gap-4 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]"
       >
         <ProcessStep
           v-for="step in processSteps"

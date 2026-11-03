@@ -9,14 +9,14 @@ import Thermobar from '@/components/ui/Thermobar.vue'
 
 <template>
   <section id="about" class="bg-white">
-    <Container class="flex flex-col gap-14 pb-24 pt-[104px]">
+    <Container class="flex flex-col gap-10 pb-16 pt-16 sm:gap-14 sm:pb-24 sm:pt-[104px]">
       <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-14"
+        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-9 sm:gap-14"
       >
-        <div class="flex min-w-0 flex-col gap-[22px]">
+        <div class="flex min-w-0 flex-col gap-4 sm:gap-[22px]">
           <EyebrowBadge>About us</EyebrowBadge>
           <h2
-            class="text-[clamp(32px,4vw,48px)] font-bold leading-[1.08] text-navy"
+            class="text-[clamp(28px,4vw,48px)] font-bold leading-[1.12] text-navy sm:text-[clamp(32px,4vw,48px)] sm:leading-[1.08]"
           >
             Engineering reliability for mission-critical environments
           </h2>
@@ -39,29 +39,29 @@ import Thermobar from '@/components/ui/Thermobar.vue'
           class="micro-card relative min-w-0 overflow-hidden rounded-2xl bg-[linear-gradient(145deg,#181933,#17376f)] text-white hover:shadow-[0_30px_60px_-34px_rgba(32,111,195,0.65)]"
         >
           <GridOverlay class="absolute inset-0 opacity-90" />
-          <div class="relative flex flex-col gap-4 px-[34px] pb-[42px] pt-9">
+          <div class="relative flex flex-col gap-3.5 px-5 pb-7 pt-6 sm:gap-4 sm:px-[34px] sm:pb-[42px] sm:pt-9">
             <span
               class="font-display text-[11px] uppercase tracking-[.2em] text-solar"
             >
               What we do
             </span>
-            <h3 class="text-2xl font-semibold leading-[1.25] text-white">
+            <h3 class="text-xl font-semibold leading-[1.25] text-white sm:text-2xl">
               Your trusted end-to-end solution provider
             </h3>
-            <p class="text-[14.5px] leading-[1.75] text-cloud">
+            <p class="text-[14px] leading-[1.65] text-cloud sm:text-[14.5px] sm:leading-[1.75]">
               We are a customer-centric organisation committed to delivering
               exceptional services and customised solutions for data centers,
               industrial applications, electrical infrastructure and HVAC
               systems.
             </p>
-            <p class="text-[14.5px] leading-[1.75] text-cloud">
+            <p class="text-[14px] leading-[1.65] text-cloud sm:text-[14.5px] sm:leading-[1.75]">
               Unlike organisations that focus on a limited range of brands, we
               offer multi-brand solutions and services, giving you greater
               flexibility and access to the right products, technologies and
               expertise whenever you need them.
             </p>
             <p
-              class="mt-1 font-display text-[16px] font-semibold text-white"
+              class="mt-1 font-display text-[15px] font-semibold text-white sm:text-[16px]"
             >
               We don't just provide solutions. We build long-term partnerships.
             </p>

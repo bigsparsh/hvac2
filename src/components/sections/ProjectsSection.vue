@@ -10,7 +10,7 @@ import SectionHeader from '@/components/ui/SectionHeader.vue'
     id="projects"
     class="border-t border-line bg-mist"
   >
-    <Container class="flex flex-col gap-10 py-24">
+    <Container class="flex flex-col gap-8 py-16 sm:gap-10 sm:py-24">
       <SectionHeader
         eyebrow="Project experience"
         title="Major customers and delivered capacity"

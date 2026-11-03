@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div
-    class="group micro-card relative flex flex-col gap-2.5 overflow-hidden rounded-[14px] border border-line bg-white px-[26px] py-6"
+    class="group micro-card relative flex flex-col gap-2.5 overflow-hidden rounded-[14px] border border-line bg-white px-5 py-5 sm:px-[26px] sm:py-6"
   >
     <span
       class="font-display text-[11px] uppercase tracking-[.16em] transition-transform duration-300 group-hover:translate-x-0.5"

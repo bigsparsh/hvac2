@@ -7,10 +7,10 @@ import PartnerCard from '@/components/ui/PartnerCard.vue'
 <template>
   <section
     id="partners"
-    class="overflow-hidden border-t border-line bg-white py-[72px]"
+    class="overflow-hidden border-t border-line bg-white py-12 sm:py-[72px]"
   >
-    <Container class="flex flex-wrap items-center justify-between gap-5">
-      <h2 class="text-[26px] font-semibold text-navy">
+    <Container class="flex flex-wrap items-center justify-between gap-4 sm:gap-5">
+      <h2 class="text-[22px] font-semibold leading-[1.3] text-navy sm:text-[26px]">
         Driving innovation through technology with
       </h2>
       <span
@@ -20,7 +20,7 @@ import PartnerCard from '@/components/ui/PartnerCard.vue'
       </span>
     </Container>
 
-    <Container class="mt-8">
+    <Container class="mt-6 sm:mt-8">
       <div
         class="marquee"
         role="region"

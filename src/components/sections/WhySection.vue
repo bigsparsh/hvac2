@@ -7,7 +7,7 @@ import SectionHeader from '@/components/ui/SectionHeader.vue'
 
 <template>
   <section id="why" class="bg-white">
-    <Container class="flex flex-col gap-11 py-24">
+    <Container class="flex flex-col gap-8 py-16 sm:gap-11 sm:py-24">
       <SectionHeader
         eyebrow="Why Thermosync JMK"
         title="Built for uptime, efficiency and value"

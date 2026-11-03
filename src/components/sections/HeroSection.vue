@@ -15,11 +15,11 @@ import Thermobar from '@/components/ui/Thermobar.vue'
     <GridOverlay class="absolute inset-0" />
 
     <Container
-      class="relative grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-center gap-10 py-16 pb-14 sm:gap-14 sm:py-24 sm:pb-[88px]"
+      class="relative grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-center gap-8 py-12 pb-10 sm:gap-14 sm:py-24 sm:pb-[88px]"
     >
-      <div class="flex min-w-0 flex-col gap-[26px]">
+      <div class="flex min-w-0 flex-col gap-5 sm:gap-[26px]">
         <span
-          class="self-start rounded-[40px] border border-brand/[0.45] bg-brand/[0.18] px-4 py-2 font-display text-[12px] uppercase tracking-[.2em] text-sky transition-all duration-300 hover:-translate-y-0.5 hover:border-sky/60 hover:bg-brand/25"
+          class="self-start rounded-[40px] border border-brand/[0.45] bg-brand/[0.18] px-3.5 py-1.5 font-display text-[11px] uppercase tracking-[.18em] text-sky transition-all duration-300 hover:-translate-y-0.5 hover:border-sky/60 hover:bg-brand/25 sm:px-4 sm:py-2 sm:text-[12px] sm:tracking-[.2em]"
         >
           Engineering solutions for critical environments
         </span>
@@ -34,7 +34,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
 
         <Thermobar class="w-60 rounded-[4px]" />
 
-        <p class="max-w-[540px] text-[17px] leading-[1.7] text-cloud">
+        <p class="max-w-[540px] text-[16px] leading-[1.65] text-cloud sm:text-[17px] sm:leading-[1.7]">
           Thermosync JMK Private Limited delivers end-to-end critical power,
           precision cooling, data center infrastructure and HVAC solutions, from
           design through commissioning and after-sales support.

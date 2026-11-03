@@ -51,11 +51,11 @@ function handleSubmit() {
 
 <template>
   <section id="contact" class="bg-white">
-    <Container class="flex flex-col gap-12 py-[104px]">
-      <div class="flex max-w-[820px] flex-col gap-[18px]">
+    <Container class="flex flex-col gap-9 py-16 sm:gap-12 sm:py-[104px]">
+      <div class="flex max-w-[820px] flex-col gap-3.5 sm:gap-[18px]">
         <EyebrowBadge>Contact us</EyebrowBadge>
         <h2
-          class="text-[clamp(30px,3.8vw,46px)] font-bold leading-[1.1] text-navy"
+          class="text-[clamp(28px,3.8vw,46px)] font-bold leading-[1.14] text-navy sm:text-[clamp(30px,3.8vw,46px)] sm:leading-[1.1]"
         >
           Your search for a client-centred partner in critical power &amp;
           cooling ends here.
@@ -63,11 +63,11 @@ function handleSubmit() {
       </div>
 
       <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start gap-8"
+        class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] items-start gap-6 sm:gap-8"
       >
         <div class="flex min-w-0 flex-col gap-3.5">
           <div
-            class="group micro-card flex items-start gap-4 rounded-[14px] border border-line bg-white px-6 py-6"
+            class="group micro-card flex items-start gap-4 rounded-[14px] border border-line bg-white px-5 py-5 sm:px-6 sm:py-6"
           >
             <AppIcon
               name="pin"
@@ -95,11 +95,11 @@ function handleSubmit() {
         </div>
 
         <form
-          class="relative flex min-w-0 flex-col gap-[18px] overflow-hidden rounded-2xl border border-line bg-mist px-[30px] pb-9 pt-8"
+          class="relative flex min-w-0 flex-col gap-4 overflow-hidden rounded-2xl border border-line bg-mist px-5 pb-7 pt-6 sm:gap-[18px] sm:px-[30px] sm:pb-9 sm:pt-8"
           aria-label="Enquiry form"
           @submit.prevent="handleSubmit"
         >
-          <h3 class="text-[20px] font-semibold text-navy">Send an enquiry</h3>
+          <h3 class="text-[18px] font-semibold text-navy sm:text-[20px]">Send an enquiry</h3>
 
           <div
             class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-4"
@@ -179,7 +179,7 @@ function handleSubmit() {
           <AppButton
             type="submit"
             variant="navy"
-            class="cursor-pointer justify-center"
+            class="w-full cursor-pointer justify-center sm:w-auto"
           >
             Send enquiry
           </AppButton>

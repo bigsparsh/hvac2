@@ -380,7 +380,7 @@
   }
 
   .field-input {
-    @apply min-h-12 w-full rounded-[10px] border border-field-line bg-white px-[14px] py-3 text-[15px] text-navy placeholder:text-[#757575];
+    @apply min-h-12 w-full rounded-[10px] border border-field-line bg-white px-[14px] py-3 text-[16px] text-navy placeholder:text-[#757575] sm:text-[15px];
     transition:
       border-color 0.2s ease,
       box-shadow 0.2s ease;
@@ -436,6 +436,22 @@
     font-family: var(--font-display);
     font-variant-numeric: tabular-nums;
     font-weight: 600;
+  }
+
+  @media (max-width: 639px) {
+    .project-table {
+      min-width: 760px;
+      font-size: 13.5px;
+    }
+
+    .project-table th {
+      padding: 12px 14px;
+      font-size: 10.5px;
+    }
+
+    .project-table td {
+      padding: 13px 14px;
+    }
   }
 }
 

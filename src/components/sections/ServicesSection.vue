@@ -13,7 +13,7 @@ import Thermobar from '@/components/ui/Thermobar.vue'
     id="services"
     class="border-t border-line bg-mist"
   >
-    <Container class="flex flex-col gap-11 py-24">
+    <Container class="flex flex-col gap-8 py-16 sm:gap-11 sm:py-24">
       <SectionHeader
         eyebrow="Our core business"
         title="Five pillars of critical infrastructure"

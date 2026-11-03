@@ -8,7 +8,7 @@ defineProps({
   <article
     class="group micro-card relative flex flex-col overflow-hidden rounded-[14px] border border-line bg-white"
   >
-    <div class="relative h-[168px] shrink-0 overflow-hidden">
+    <div class="relative h-[150px] shrink-0 overflow-hidden sm:h-[168px]">
       <img
         :src="service.image"
         :alt="service.imageAlt || service.title"
@@ -18,13 +18,13 @@ defineProps({
       />
     </div>
 
-    <div class="relative flex flex-1 flex-col gap-4 px-7 pb-8 pt-6">
+    <div class="relative flex flex-1 flex-col gap-3.5 px-5 pb-6 pt-5 sm:gap-4 sm:px-7 sm:pb-8 sm:pt-6">
       <h3
-        class="text-[21px] font-semibold text-navy transition-colors duration-300 group-hover:text-brand"
+        class="text-[19px] font-semibold text-navy transition-colors duration-300 group-hover:text-brand sm:text-[21px]"
       >
         {{ service.title }}
       </h3>
-      <p class="text-sm leading-[1.7] text-ink">{{ service.description }}</p>
+      <p class="text-[13.5px] leading-[1.65] text-ink sm:text-sm sm:leading-[1.7]">{{ service.description }}</p>
       <div class="flex flex-wrap gap-2">
         <span v-for="tag in service.tags" :key="tag" class="chip">{{ tag }}</span>
       </div>
