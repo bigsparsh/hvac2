@@ -13,7 +13,7 @@ const props = defineProps({
   },
 })
 
-const WHATSAPP_NUMBER = '911024102423'
+const WHATSAPP_NUMBER = '919873143974'
 
 const submitted = ref(false)
 
