@@ -12,6 +12,7 @@ import ServicesSection from '@/components/sections/ServicesSection.vue'
 import SupportSection from '@/components/sections/SupportSection.vue'
 import WhySection from '@/components/sections/WhySection.vue'
 import EnquiryModal from '@/components/ui/EnquiryModal.vue'
+import EnquiryWidget from '@/components/ui/EnquiryWidget.vue'
 </script>
 
 <template>
@@ -31,5 +32,6 @@ import EnquiryModal from '@/components/ui/EnquiryModal.vue'
     </main>
     <SiteFooter />
     <EnquiryModal />
+    <EnquiryWidget />
   </div>
 </template>
