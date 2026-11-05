@@ -3,6 +3,16 @@ import dataCenterCoolingImage from '@/assets/images/data-center-cooling.jpg'
 import dataCenterInfraImage from '@/assets/images/data-center-infra.jpeg'
 import hvacImage from '@/assets/images/hvac.webp'
 import afterSalesImage from '@/assets/images/after-sales-services.png'
+import bankingImage from '@/assets/images/industries/banking-financial.webp'
+import commercialBuildingsImage from '@/assets/images/industries/commercial-buildings.webp'
+import dataCentersImage from '@/assets/images/industries/data-centers.webp'
+import educationImage from '@/assets/images/industries/education-research.webp'
+import healthcareImage from '@/assets/images/industries/healthcare.webp'
+import hospitalityImage from '@/assets/images/industries/hospitality.webp'
+import itItesImage from '@/assets/images/industries/it-ites.webp'
+import manufacturingImage from '@/assets/images/industries/manufacturing.webp'
+import solarImage from '@/assets/images/industries/solar.webp'
+import warehousingImage from '@/assets/images/industries/warehousing-logistics.webp'
 import fujiLogo from '@/assets/images/partners/fuji.png'
 import hisenseLogo from '@/assets/images/partners/hisense.png'
 import schneiderLogo from '@/assets/images/partners/schneider.png'
@@ -240,53 +250,63 @@ export const processSteps = [
 export const industries = [
   {
     name: 'Data Centers',
-    icon: 'industry-datacenter',
-    stroke: '#206FC3',
+    image: dataCentersImage,
+    imageAlt: 'Rows of server racks inside a data center',
+    accent: '#206FC3',
   },
   {
     name: 'Healthcare',
-    icon: 'industry-healthcare',
-    stroke: '#9A0F14',
+    image: healthcareImage,
+    imageAlt: 'Hospital emergency entrance',
+    accent: '#9A0F14',
   },
   {
     name: 'IT & ITeS',
-    icon: 'industry-it',
-    stroke: '#17376F',
+    image: itItesImage,
+    imageAlt: 'Modern open-plan office workspace',
+    accent: '#17376F',
   },
   {
     name: 'Banking & Financial Services',
-    icon: 'industry-banking',
-    stroke: '#C47F00',
+    image: bankingImage,
+    imageAlt: 'Financial district skyline at dusk',
+    accent: '#C47F00',
   },
   {
     name: 'Service & Hospitality',
-    icon: 'industry-hospitality',
-    stroke: '#206FC3',
+    image: hospitalityImage,
+    imageAlt: 'Modern hotel buildings at sunset',
+    accent: '#206FC3',
   },
   {
     name: 'Manufacturing',
-    icon: 'industry-manufacturing',
-    stroke: '#9A0F14',
+    image: manufacturingImage,
+    imageAlt: 'Industrial manufacturing facility',
+    accent: '#9A0F14',
   },
   {
     name: 'Warehousing & Logistics',
-    icon: 'industry-warehouse',
-    stroke: '#17376F',
+    image: warehousingImage,
+    imageAlt: 'Workers and shelving inside a warehouse',
+    accent: '#17376F',
   },
   {
     name: 'Commercial Buildings',
-    icon: 'industry-commercial',
-    stroke: '#181933',
+    image: commercialBuildingsImage,
+    imageAlt: 'Modern commercial buildings',
+    accent: '#181933',
   },
   {
     name: 'Solar Industries',
-    icon: 'industry-solar',
-    stroke: '#4CA10D',
+    image: solarImage,
+    imageAlt: 'Solar panels installed on a rooftop',
+    accent: '#4CA10D',
   },
   {
     name: 'Education & Research',
-    icon: 'industry-education',
-    stroke: '#C47F00',
+    image: educationImage,
+    imageAlt: 'University campus building',
+    accent: '#C47F00',
   },
 ]
 

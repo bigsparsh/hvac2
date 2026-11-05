@@ -1,6 +1,4 @@
 <script setup>
-import AppIcon from './AppIcon.vue'
-
 defineProps({
   industry: { type: Object, required: true },
 })
@@ -8,18 +6,30 @@ defineProps({
 
 <template>
   <div
-    class="group micro-card flex min-h-[112px] flex-col justify-between gap-3 rounded-[14px] border border-line bg-white px-4 py-4 sm:min-h-[120px] sm:gap-3.5 sm:px-5 sm:py-[22px]"
+    class="group micro-card relative flex min-h-[140px] flex-col justify-end overflow-hidden rounded-[14px] border border-line bg-navy p-4 sm:min-h-[160px] sm:p-5"
   >
-    <AppIcon
-      :name="industry.icon"
-      :size="26"
-      :stroke="industry.stroke"
-      class="micro-icon shrink-0"
+    <img
+      :src="industry.image"
+      :alt="industry.imageAlt || industry.name"
+      class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+      loading="lazy"
+      decoding="async"
     />
-    <span
-      class="font-display text-[14px] font-semibold text-navy transition-colors duration-300 group-hover:text-brand sm:text-[15.5px]"
-    >
-      {{ industry.name }}
-    </span>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/5"
+      aria-hidden="true"
+    ></div>
+    <div class="relative flex flex-col gap-2">
+      <span
+        class="h-[3px] w-7 rounded-full"
+        :style="{ backgroundColor: industry.accent }"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="font-display text-[14px] font-semibold leading-[1.25] text-white drop-shadow-[0_1px_8px_rgba(9,17,39,0.6)] sm:text-[15.5px]"
+      >
+        {{ industry.name }}
+      </span>
+    </div>
   </div>
 </template>
