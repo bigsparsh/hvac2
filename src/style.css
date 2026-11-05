@@ -423,65 +423,6 @@
     @apply border-brand outline-2 outline-offset-1 outline-brand;
     box-shadow: 0 0 0 4px rgba(32, 111, 195, 0.12);
   }
-
-  .project-table {
-    width: 100%;
-    min-width: 860px;
-    border-collapse: collapse;
-    font-size: 14px;
-  }
-
-  .project-table th {
-    padding: 14px 18px;
-    border-bottom: 1px solid #e3e8ef;
-    background: #f4f6f9;
-    color: #6b6b78;
-    font-family: var(--font-display);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  .project-table td {
-    padding: 16px 18px;
-    border-bottom: 1px solid #e3e8ef;
-    color: #2b2f38;
-    vertical-align: middle;
-  }
-
-  .project-table tbody tr:last-child td {
-    border-bottom: 0;
-  }
-
-  .project-table td.customer {
-    color: #181933;
-    font-weight: 600;
-  }
-
-  .project-table .num {
-    color: #181933;
-    font-family: var(--font-display);
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
-  }
-
-  @media (max-width: 639px) {
-    .project-table {
-      min-width: 760px;
-      font-size: 13.5px;
-    }
-
-    .project-table th {
-      padding: 12px 14px;
-      font-size: 10.5px;
-    }
-
-    .project-table td {
-      padding: 13px 14px;
-    }
-  }
 }
 
 @keyframes marquee {

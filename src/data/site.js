@@ -18,6 +18,12 @@ import hisenseLogo from '@/assets/images/partners/hisense.png'
 import schneiderLogo from '@/assets/images/partners/schneider.png'
 import socomecLogo from '@/assets/images/partners/socomec.png'
 import swegonLogo from '@/assets/images/partners/swegon.png'
+import allengersLogo from '@/assets/images/customers/allengers.webp'
+import innovativeResinsLogo from '@/assets/images/customers/innovative-resins.webp'
+import punjabBevelGearsLogo from '@/assets/images/customers/punjab-bevel-gears.webp'
+import erosGroupLogo from '@/assets/images/customers/eros-group.webp'
+import orianaPowerLogo from '@/assets/images/customers/oriana-power.webp'
+import parsonsLogo from '@/assets/images/customers/parsons.webp'
 
 export const navigation = [
   { label: 'About', href: '#about' },
@@ -319,55 +325,13 @@ export const partners = [
 ]
 
 export const projects = [
-  {
-    customer: 'KF Instruments Pvt Ltd',
-    category: 'Critical Power',
-    capacity: '2 × 500 kVA',
-    application: 'Manufacturing machines',
-    location: 'Bawal, Haryana',
-  },
-  {
-    customer: 'Allengers Medical Systems Limited',
-    category: 'Critical Power',
-    capacity: '2 × 200 kVA',
-    application: 'Medical equipment',
-    location: 'Multiple',
-  },
-  {
-    customer: 'Innovative Resins Private Limited',
-    category: 'HVAC',
-    capacity: 'Ductable VRF',
-    application: 'Office area',
-    location: 'Gurugram, Haryana',
-  },
-  {
-    customer: 'Punjab Bevel Gears Ltd',
-    category: 'HVAC',
-    capacity: 'Ductable VRF',
-    application: 'Machine area',
-    location: 'Multiple',
-  },
-  {
-    customer: 'Eros Group',
-    category: 'Critical Power',
-    capacity: '30 kVA, 40 kVA',
-    application: 'Office area',
-    location: 'Multiple',
-  },
-  {
-    customer: 'Oriana Power Limited',
-    category: 'Critical Power',
-    capacity: '1 – 40 kVA',
-    application: 'Solar application',
-    location: 'Multiple',
-  },
-  {
-    customer: 'Parasons Nutritionals Solutions Limited',
-    category: 'Critical Power',
-    capacity: '800 kVA',
-    application: 'Manufacturing machines',
-    location: 'Bhiwadi, Rajasthan',
-  },
+  { customer: 'KF Instruments Pvt Ltd', logo: null, initials: 'KF' },
+  { customer: 'Allengers Medical Systems Limited', logo: allengersLogo },
+  { customer: 'Innovative Resins Private Limited', logo: innovativeResinsLogo },
+  { customer: 'Punjab Bevel Gears Ltd', logo: punjabBevelGearsLogo },
+  { customer: 'Eros Group', logo: erosGroupLogo },
+  { customer: 'Oriana Power Limited', logo: orianaPowerLogo },
+  { customer: 'Parasons Nutritionals Solutions Limited', logo: parsonsLogo },
 ]
 
 export const supportRoles = [
