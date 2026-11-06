@@ -21,12 +21,12 @@ const initials = computed(
   <div
     class="group micro-card flex flex-col items-center gap-4 rounded-[14px] border border-line bg-white p-6 text-center"
   >
-    <div class="flex h-20 w-full items-center justify-center">
+    <div class="flex h-20 w-full min-w-0 items-center justify-center">
       <img
         v-if="customer.logo"
         :src="customer.logo"
         :alt="`${customer.customer} logo`"
-        class="max-h-full max-w-[180px] object-contain transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+        class="block max-h-full w-auto max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.05]"
         loading="lazy"
         decoding="async"
       />
